@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D0900041E03CAB2004DB315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0900031E03CAB2004DB315 /* AppDelegate.swift */; };
+		2D0900061E03CAB2004DB315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0900051E03CAB2004DB315 /* ViewController.swift */; };
+		2D0900091E03CAB2004DB315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D0900071E03CAB2004DB315 /* Main.storyboard */; };
+		2D09000B1E03CAB2004DB315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D09000A1E03CAB2004DB315 /* Assets.xcassets */; };
+		2D09000E1E03CAB2004DB315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D09000C1E03CAB2004DB315 /* LaunchScreen.storyboard */; };
+		2D0900191E03CAB2004DB315 /* SBPasswordFieldExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0900181E03CAB2004DB315 /* SBPasswordFieldExampleTests.swift */; };
+		2D0900251E03CAE3004DB315 /* SBPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0900241E03CAE3004DB315 /* SBPasswordField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D0900151E03CAB2004DB315 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D09FFF81E03CAB2004DB315 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D09FFFF1E03CAB2004DB315;
+			remoteInfo = SBPasswordFieldExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D0900001E03CAB2004DB315 /* SBPasswordFieldExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBPasswordFieldExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D0900031E03CAB2004DB315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2D0900051E03CAB2004DB315 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D0900081E03CAB2004DB315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D09000A1E03CAB2004DB315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D09000D1E03CAB2004DB315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D09000F1E03CAB2004DB315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D0900141E03CAB2004DB315 /* SBPasswordFieldExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBPasswordFieldExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D0900181E03CAB2004DB315 /* SBPasswordFieldExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBPasswordFieldExampleTests.swift; sourceTree = "<group>"; };
+		2D09001A1E03CAB2004DB315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D0900241E03CAE3004DB315 /* SBPasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBPasswordField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D0900111E03CAB2004DB315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D09FFFD1E03CAB2004DB315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D0900011E03CAB2004DB315 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D0900001E03CAB2004DB315 /* SBPasswordFieldExample.app */,
+				2D0900141E03CAB2004DB315 /* SBPasswordFieldExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D0900021E03CAB2004DB315 /* SBPasswordFieldExample */ = {
+			isa = PBXGroup;
+			children = (
+				2D0900031E03CAB2004DB315 /* AppDelegate.swift */,
+				2D0900051E03CAB2004DB315 /* ViewController.swift */,
+				2D0900071E03CAB2004DB315 /* Main.storyboard */,
+				2D09000A1E03CAB2004DB315 /* Assets.xcassets */,
+				2D09000C1E03CAB2004DB315 /* LaunchScreen.storyboard */,
+				2D09000F1E03CAB2004DB315 /* Info.plist */,
+			);
+			path = SBPasswordFieldExample;
+			sourceTree = "<group>";
+		};
+		2D0900171E03CAB2004DB315 /* SBPasswordFieldExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D0900181E03CAB2004DB315 /* SBPasswordFieldExampleTests.swift */,
+				2D09001A1E03CAB2004DB315 /* Info.plist */,
+			);
+			path = SBPasswordFieldExampleTests;
+			sourceTree = "<group>";
+		};
+		2D0900231E03CACC004DB315 /* SBPasswordField */ = {
+			isa = PBXGroup;
+			children = (
+				2D0900241E03CAE3004DB315 /* SBPasswordField.swift */,
+			);
+			name = SBPasswordField;
+			path = SBPasswordFieldExample/SBPasswordField;
+			sourceTree = "<group>";
+		};
+		2D09FFF71E03CAB2004DB315 = {
+			isa = PBXGroup;
+			children = (
+				2D0900231E03CACC004DB315 /* SBPasswordField */,
+				2D0900021E03CAB2004DB315 /* SBPasswordFieldExample */,
+				2D0900171E03CAB2004DB315 /* SBPasswordFieldExampleTests */,
+				2D0900011E03CAB2004DB315 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D0900131E03CAB2004DB315 /* SBPasswordFieldExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D0900201E03CAB2004DB315 /* Build configuration list for PBXNativeTarget "SBPasswordFieldExampleTests" */;
+			buildPhases = (
+				2D0900101E03CAB2004DB315 /* Sources */,
+				2D0900111E03CAB2004DB315 /* Frameworks */,
+				2D0900121E03CAB2004DB315 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D0900161E03CAB2004DB315 /* PBXTargetDependency */,
+			);
+			name = SBPasswordFieldExampleTests;
+			productName = SBPasswordFieldExampleTests;
+			productReference = 2D0900141E03CAB2004DB315 /* SBPasswordFieldExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2D09FFFF1E03CAB2004DB315 /* SBPasswordFieldExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D09001D1E03CAB2004DB315 /* Build configuration list for PBXNativeTarget "SBPasswordFieldExample" */;
+			buildPhases = (
+				2D09FFFC1E03CAB2004DB315 /* Sources */,
+				2D09FFFD1E03CAB2004DB315 /* Frameworks */,
+				2D09FFFE1E03CAB2004DB315 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SBPasswordFieldExample;
+			productName = SBPasswordFieldExample;
+			productReference = 2D0900001E03CAB2004DB315 /* SBPasswordFieldExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D09FFF81E03CAB2004DB315 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = songbihai;
+				TargetAttributes = {
+					2D0900131E03CAB2004DB315 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
+						TestTargetID = 2D09FFFF1E03CAB2004DB315;
+					};
+					2D09FFFF1E03CAB2004DB315 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
+					};
+				};
+			};
+			buildConfigurationList = 2D09FFFB1E03CAB2004DB315 /* Build configuration list for PBXProject "SBPasswordFieldExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D09FFF71E03CAB2004DB315;
+			productRefGroup = 2D0900011E03CAB2004DB315 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D09FFFF1E03CAB2004DB315 /* SBPasswordFieldExample */,
+				2D0900131E03CAB2004DB315 /* SBPasswordFieldExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D0900121E03CAB2004DB315 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D09FFFE1E03CAB2004DB315 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D09000E1E03CAB2004DB315 /* LaunchScreen.storyboard in Resources */,
+				2D09000B1E03CAB2004DB315 /* Assets.xcassets in Resources */,
+				2D0900091E03CAB2004DB315 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D0900101E03CAB2004DB315 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D0900191E03CAB2004DB315 /* SBPasswordFieldExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D09FFFC1E03CAB2004DB315 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D0900251E03CAE3004DB315 /* SBPasswordField.swift in Sources */,
+				2D0900061E03CAB2004DB315 /* ViewController.swift in Sources */,
+				2D0900041E03CAB2004DB315 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D0900161E03CAB2004DB315 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D09FFFF1E03CAB2004DB315 /* SBPasswordFieldExample */;
+			targetProxy = 2D0900151E03CAB2004DB315 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D0900071E03CAB2004DB315 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D0900081E03CAB2004DB315 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2D09000C1E03CAB2004DB315 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D09000D1E03CAB2004DB315 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D09001B1E03CAB2004DB315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D09001C1E03CAB2004DB315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D09001E1E03CAB2004DB315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SBPasswordFieldExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SBH.SBPasswordFieldExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2D09001F1E03CAB2004DB315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SBPasswordFieldExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SBH.SBPasswordFieldExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2D0900211E03CAB2004DB315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SBPasswordFieldExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SBH.SBPasswordFieldExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBPasswordFieldExample.app/SBPasswordFieldExample";
+			};
+			name = Debug;
+		};
+		2D0900221E03CAB2004DB315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SBPasswordFieldExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SBH.SBPasswordFieldExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBPasswordFieldExample.app/SBPasswordFieldExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D09001D1E03CAB2004DB315 /* Build configuration list for PBXNativeTarget "SBPasswordFieldExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D09001E1E03CAB2004DB315 /* Debug */,
+				2D09001F1E03CAB2004DB315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D0900201E03CAB2004DB315 /* Build configuration list for PBXNativeTarget "SBPasswordFieldExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D0900211E03CAB2004DB315 /* Debug */,
+				2D0900221E03CAB2004DB315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D09FFFB1E03CAB2004DB315 /* Build configuration list for PBXProject "SBPasswordFieldExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D09001B1E03CAB2004DB315 /* Debug */,
+				2D09001C1E03CAB2004DB315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D09FFF81E03CAB2004DB315 /* Project object */;
+}
