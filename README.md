@@ -1,2 +1,2 @@
 # SBPasswordField
-自定义的密码输入Field
+自定义的密码输入Field, 支付宝类似的密码输入
