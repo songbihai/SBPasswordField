@@ -163,6 +163,7 @@
 					};
 					2D09FFFF1E03CAB2004DB315 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7R5H7SFDCY;
 						LastSwiftMigration = 0810;
 					};
 				};
@@ -349,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7R5H7SFDCY;
 				INFOPLIST_FILE = SBPasswordFieldExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SBH.SBPasswordFieldExample;
@@ -361,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7R5H7SFDCY;
 				INFOPLIST_FILE = SBPasswordFieldExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SBH.SBPasswordFieldExample;

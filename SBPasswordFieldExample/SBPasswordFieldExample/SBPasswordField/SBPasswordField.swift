@@ -4,7 +4,7 @@
 //
 //  Created by 宋碧海 on 2016/12/16.
 //  Copyright © 2016年 songbihai. All rights reserved.
-//
+//  
 
 import UIKit
 
@@ -20,6 +20,7 @@ import UIKit
     @objc optional
     func imageSource(_ passwordField: SBPasswordField, dotImageAtIndex: Int, filled: Bool) -> UIImage
 }
+
 
 class SBPasswordField: UIControl {
 
@@ -38,6 +39,8 @@ class SBPasswordField: UIControl {
     
     var keyboardType: UIKeyboardType = .default
     
+    var insertRegularExpression: NSRegularExpression?
+    
     var password: String? {
         set {
             guard let pass = newValue else { return }
@@ -55,8 +58,8 @@ class SBPasswordField: UIControl {
     
     fileprivate var maxPassword: String?
     
-    fileprivate var nonDigitRegularExpression: NSRegularExpression = {
-        let regularExpression = try! NSRegularExpression.init(pattern: "[^0-9]+", options: [])
+    fileprivate var nonDigitRegularExpression: NSRegularExpression? = {
+        let regularExpression = try? NSRegularExpression.init(pattern: "[^0-9]+", options: [])
         return regularExpression
     }()
     
@@ -110,6 +113,7 @@ class SBPasswordField: UIControl {
         return true
     }
     
+    // 设置键盘自动大小写的属性
     var autocapitalizationType: UITextAutocapitalizationType {
         get {
             return .none
@@ -119,6 +123,7 @@ class SBPasswordField: UIControl {
         }
     }
     
+    //设置是否有自动修改提示
     var autocorrectionType: UITextAutocorrectionType {
         get {
             return .no
@@ -128,6 +133,7 @@ class SBPasswordField: UIControl {
         }
     }
     
+    //设置输入文本的拼写检查类型
     var spellCheckingType: UITextSpellCheckingType {
         get {
             return .no
@@ -137,6 +143,7 @@ class SBPasswordField: UIControl {
         }
     }
     
+    //设置在用户没有输入是returnKey禁用
     var enablesReturnKeyAutomatically: Bool {
         get {
             return true
@@ -146,6 +153,7 @@ class SBPasswordField: UIControl {
         }
     }
     
+    //设置键盘显示方式
     var keyboardAppearance: UIKeyboardAppearance {
         get {
             return .default
@@ -155,6 +163,7 @@ class SBPasswordField: UIControl {
         }
     }
     
+    //设置renturnKey按键上的提示文字
     var returnKeyType: UIReturnKeyType {
         get {
             return .done
@@ -178,17 +187,20 @@ extension SBPasswordField: UIKeyInput {
     
     func insertText(_ text: String) {
         guard isEnabled else { return }
-        print("start: \(maxPassword)")
-        print(text)
         
         var replacingText: String = ""
-        if keyboardType == .numberPad {
-            replacingText  = nonDigitRegularExpression.stringByReplacingMatches(in: text, options: [], range: NSMakeRange(0, text.characters.count), withTemplate: "")
+        if nonDigitRegularExpression != nil && keyboardType == .numberPad {
+            replacingText  = nonDigitRegularExpression!.stringByReplacingMatches(in: text, options: [], range: NSMakeRange(0, text.characters.count), withTemplate: "")
         }else {
             replacingText = text
         }
         
+        if let regularExpression = insertRegularExpression {
+            replacingText = regularExpression.stringByReplacingMatches(in: replacingText, options: [], range: NSMakeRange(0, replacingText.characters.count), withTemplate: "")
+        }
+        
         guard replacingText.characters.count > 0 else { return }
+        
         let newCount = replacingText.characters.count + (maxPassword?.characters.count ?? 0)
         if newCount > maximumLength {
             return
@@ -210,7 +222,6 @@ extension SBPasswordField: UIKeyInput {
         setNeedsDisplay()
         sendActions(for: .editingChanged)
         
-        print("end: \(maxPassword)")
     }
     
     func deleteBackward() {
