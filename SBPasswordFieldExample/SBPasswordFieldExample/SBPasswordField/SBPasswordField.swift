@@ -14,6 +14,8 @@ import UIKit
     func shouldInsert(_ passwordField: SBPasswordField, text: String) -> Bool
     @objc optional
     func shouldDeleteBackward(_ passwordField: SBPasswordField) -> Bool
+    @objc optional
+    func passwordDidChanged(_ passwordField: SBPasswordField, password: String?)
 }
 
 @objc protocol SBPasscodeFieldImageSource: NSObjectProtocol {
@@ -56,7 +58,14 @@ class SBPasswordField: UIControl {
         }
     }
     
-    fileprivate var maxPassword: String?
+    fileprivate var maxPassword: String? {
+        didSet {
+            guard oldValue != maxPassword else {
+                return
+            }
+            delegate?.passwordDidChanged?(self, password: maxPassword)
+        }
+    }
     
     fileprivate var nonDigitRegularExpression: NSRegularExpression? = {
         let regularExpression = try? NSRegularExpression.init(pattern: "[^0-9]+", options: [])
