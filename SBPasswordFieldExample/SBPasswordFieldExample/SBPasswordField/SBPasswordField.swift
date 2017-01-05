@@ -10,17 +10,13 @@ import UIKit
 
 
 @objc protocol SBPasscodeFieldDelegate: NSObjectProtocol {
-    @objc optional
-    func shouldInsert(_ passwordField: SBPasswordField, text: String) -> Bool
-    @objc optional
-    func shouldDeleteBackward(_ passwordField: SBPasswordField) -> Bool
-    @objc optional
-    func passwordDidChanged(_ passwordField: SBPasswordField, password: String?)
+    optional func shouldInsert(_ passwordField: SBPasswordField, text: String) -> Bool
+    optional func shouldDeleteBackward(_ passwordField: SBPasswordField) -> Bool
+    optional func passwordDidChanged(_ passwordField: SBPasswordField, password: String?)
 }
 
 @objc protocol SBPasscodeFieldImageSource: NSObjectProtocol {
-    @objc optional
-    func imageSource(_ passwordField: SBPasswordField, dotImageAtIndex: Int, filled: Bool) -> UIImage
+    optional func imageSource(_ passwordField: SBPasswordField, dotImageAtIndex: Int, filled: Bool) -> UIImage
 }
 
 
