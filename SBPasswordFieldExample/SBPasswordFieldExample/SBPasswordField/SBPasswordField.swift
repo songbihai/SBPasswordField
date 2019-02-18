@@ -10,13 +10,13 @@ import UIKit
 
 
 @objc protocol SBPasscodeFieldDelegate: NSObjectProtocol {
-    optional func shouldInsert(_ passwordField: SBPasswordField, text: String) -> Bool
-    optional func shouldDeleteBackward(_ passwordField: SBPasswordField) -> Bool
-    optional func passwordDidChanged(_ passwordField: SBPasswordField, password: String?)
+    @objc optional func shouldInsert(_ passwordField: SBPasswordField, text: String) -> Bool
+    @objc optional func shouldDeleteBackward(_ passwordField: SBPasswordField) -> Bool
+    @objc optional func passwordDidChanged(_ passwordField: SBPasswordField, password: String?)
 }
 
 @objc protocol SBPasscodeFieldImageSource: NSObjectProtocol {
-    optional func imageSource(_ passwordField: SBPasswordField, dotImageAtIndex: Int, filled: Bool) -> UIImage
+    @objc optional func imageSource(_ passwordField: SBPasswordField, dotImageAtIndex: Int, filled: Bool) -> UIImage
 }
 
 
@@ -42,8 +42,8 @@ class SBPasswordField: UIControl {
     var password: String? {
         set {
             guard let pass = newValue else { return }
-            if pass.characters.count > maximumLength {
-                maxPassword = pass.substring(to: pass.characters.index(pass.startIndex, offsetBy: maximumLength))
+            if pass.count > maximumLength {
+                maxPassword = pass.substring(to: pass.index(pass.startIndex, offsetBy: maximumLength))
             }else {
                 maxPassword = pass
             }
@@ -89,7 +89,7 @@ class SBPasswordField: UIControl {
         if let source = dataSource, source.responds(to: #selector(SBPasscodeFieldImageSource.imageSource(_:dotImageAtIndex:filled:))) {
             for index in 0..<maximumLength {
                 var image: UIImage?
-                if let maxPass = maxPassword, index < maxPass.characters.count {
+                if let maxPass = maxPassword, index < maxPass.count {
                     image = source.imageSource!(self, dotImageAtIndex: index, filled: true)
                 }else {
                     image = source.imageSource!(self, dotImageAtIndex: index, filled: false)
@@ -104,7 +104,7 @@ class SBPasswordField: UIControl {
                 context?.setFillColor(dotSupViewColor.cgColor)
                 let dotSupFrame = CGRect(x: origin.x, y: origin.y, width: itemSize.width, height: contentSize.height)
                 context?.fill(dotSupFrame)
-                if let maxPass = maxPassword, index < maxPass.characters.count {
+                if let maxPass = maxPassword, index < maxPass.count {
                     context?.setFillColor(dotColor.cgColor)
                     let circleFrame = CGRect(x: origin.x + (itemSize.width - dotSize.width) / 2, y: origin.y + (contentSize.height - dotSize.height) / 2, width: dotSize.width, height: dotSize.height)
                     context?.fillEllipse(in: circleFrame)
@@ -121,7 +121,7 @@ class SBPasswordField: UIControl {
 
 extension SBPasswordField: UIKeyInput {
     var hasText : Bool {
-        return maxPassword?.characters.count ?? 0 > 0
+        return maxPassword?.count ?? 0 > 0
     }
     
     func insertText(_ text: String) {
@@ -129,18 +129,18 @@ extension SBPasswordField: UIKeyInput {
         
         var replacingText: String = ""
         if nonDigitRegularExpression != nil && keyboardType == .numberPad {
-            replacingText  = nonDigitRegularExpression!.stringByReplacingMatches(in: text, options: [], range: NSMakeRange(0, text.characters.count), withTemplate: "")
+            replacingText  = nonDigitRegularExpression!.stringByReplacingMatches(in: text, options: [], range: NSMakeRange(0, text.count), withTemplate: "")
         }else {
             replacingText = text
         }
         
         if let regularExpression = insertRegularExpression {
-            replacingText = regularExpression.stringByReplacingMatches(in: replacingText, options: [], range: NSMakeRange(0, replacingText.characters.count), withTemplate: "")
+            replacingText = regularExpression.stringByReplacingMatches(in: replacingText, options: [], range: NSMakeRange(0, replacingText.count), withTemplate: "")
         }
         
-        guard replacingText.characters.count > 0 else { return }
+        guard replacingText.count > 0 else { return }
         
-        let newCount = replacingText.characters.count + (maxPassword?.characters.count ?? 0)
+        let newCount = replacingText.count + (maxPassword?.count ?? 0)
         if newCount > maximumLength {
             return
         }
@@ -174,7 +174,7 @@ extension SBPasswordField: UIKeyInput {
         }
         
         if let maxPass = maxPassword {
-            if maxPass.characters.count == 0 {
+            if maxPass.count == 0 {
                 return
             }
         }else {
@@ -182,7 +182,7 @@ extension SBPasswordField: UIKeyInput {
         }
         
         if let maxPass = maxPassword {
-            maxPassword?.removeSubrange(maxPass.characters.index(before: maxPass.endIndex)..<maxPass.endIndex)
+            maxPassword?.removeSubrange(maxPass.index(before: maxPass.endIndex)..<maxPass.endIndex)
         }
         
         setNeedsDisplay()
