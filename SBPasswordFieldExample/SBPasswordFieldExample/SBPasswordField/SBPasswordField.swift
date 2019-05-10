@@ -43,7 +43,7 @@ class SBPasswordField: UIControl {
         set {
             guard let pass = newValue else { return }
             if pass.count > maximumLength {
-                maxPassword = pass.substring(to: pass.index(pass.startIndex, offsetBy: maximumLength))
+                maxPassword = String(pass.prefix(maximumLength))
             }else {
                 maxPassword = pass
             }
@@ -79,7 +79,9 @@ class SBPasswordField: UIControl {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        backgroundColor = UIColor.clear
+        self.addTarget(self, action: #selector(didTouchUpInside), for: .touchUpInside)
     }
 
     override func draw(_ rect: CGRect) {
